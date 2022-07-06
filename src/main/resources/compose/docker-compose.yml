@@ -1,0 +1,15 @@
+aerolineas-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGERS_USER: aerolineasdb
+      POSTGRES_PASSWORD: aeroapi
+      POSTGRES_DB: AEROLINEAS
+    ports:
+     - 5435:5432
+
+adminer:
+    image: adminer
+    restart: always
+    ports:
+    - 8083:8080
